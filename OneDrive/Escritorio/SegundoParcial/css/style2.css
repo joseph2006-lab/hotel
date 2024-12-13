@@ -1,0 +1,57 @@
+* {
+  background-color: #1f242d;
+  color: #0ef;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #0ef;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: border-color 0.3s ease;
+  color: #0ef;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0ef;
+  outline: none;
+}
+
+button {
+  position: relative;
+  color: #0ef;
+  width: auto;
+  height: auto;
+  padding: 10px 50px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #0ef;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+}
+button:hover {
+  color: #1f242d;
+  box-shadow: 0 0 5px #0ef, 0 0 5px #0ef inset;
+}
+button::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #0ef;
+  box-shadow: 0 0 20px #0ef;
+  z-index: -1;
+  transition: 0.3s;
+}
+button:hover::after {
+  left: 0;
+  width: 100%;
+}
